@@ -5,7 +5,11 @@ This is the Celpax's NodeJS DailyPulse Client API. Note that:
 - All API calls are asynchronous, you need to pass a callBack function as is typical in NodeJS.
 - CallBacks forllow the standard signature of `callBack(error,object).`
 
-## Instanciate the client
+## Install the client
+
+In order to install simply call `npm install daylypulse` or include it in your `package.json` file as a dependency.
+
+## create a dailypulse instance
 
 In order to instanciate the dailypulse client and start making request you need to do:
 
