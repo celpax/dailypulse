@@ -1,0 +1,23 @@
+{
+    "name": "dailypulse",
+    "version": "1.0.0",
+    "description":"Celpax DailyPulse NodeJS API Client",
+    "author": {
+        "name": "rafael@celpax.com"
+    },
+    "main": "lib/index.js",
+    "homepage": "http://www.celpax.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/celpax/dailypulse"
+    },
+
+    "dependencies":{
+        "urlsign":"*",
+        "restify":"*"
+    },
+    "devDependencies":{
+        "mocha":"*",
+        "chai":"*"
+    }
+}
