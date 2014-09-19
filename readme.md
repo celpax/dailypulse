@@ -7,7 +7,7 @@ This is the Celpax's NodeJS DailyPulse Client API. Note that:
 
 ## Install the client
 
-In order to install simply call `npm install daylypulse` or include it in your `package.json` file as a dependency.
+In order to install simply call `npm install dailypulse` or include it in your `package.json` file as a dependency.
 
 ## create a dailypulse instance
 
