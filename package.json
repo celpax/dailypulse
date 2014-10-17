@@ -1,6 +1,6 @@
 {
     "name": "dailypulse",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description":"Celpax DailyPulse NodeJS API Client",
     "author": {
         "name": "rafael@celpax.com"
