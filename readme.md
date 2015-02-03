@@ -64,6 +64,12 @@ dailyPulseClient.getPulsesPerTypicalDay(site.id,function(err,typicalday){
 ```
 A date member will also be returned indicating when the pulses per typical day was last updated.
 
+## User Interface Design
+
+We have released user interface elements, such as: colours, fonts, widgets available in the github project: [DailyPulse-Resources](https://github.com/celpax/dailypulse-resources)
+
+The resources provided match the User Interface of the DailyPulse Dashboard.
+
 ## Testing
 
 An echo test method has also been include so that you can test your setup as much as you want before pulling real data.
