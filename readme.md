@@ -37,16 +37,30 @@ You can get your sites as follows:
 
 ## Mood KPI
 
-You can retrieve the latest calculated Mood KPI for a give site as follows:
+You can retrieve the latest calculated Mood KPI for a given site as follows:
 
 ```javascript
     dailyPulseClient.getMoodKPI(mySite.id, function(err,mood){
         // err should be null if everthing went OK!
-        if(mood.green > 70) Console.log("We are goind very well!!");
+        if(mood.green > 70) Console.log("We are going very well!!");
     });
 ```
 
 Note that in some cases the Mood KPI cannot be calculated (for example during rollout) and will be returned as null. A date member will also be included indicating when the Mood KPI was last updated.
+
+## Historical Mood KPI
+
+You can retrieve the historical calculated Mood KPI for a given site and the number of days to fetch since today as follows:
+
+```javascript
+   dailyPulseClient.getHistoricalMoodKPI(mySite.id,numberOfDaysToFetch,function(err,moodArray){ 
+        // err should be null if everthing went OK!
+        if(moodArray[0].green > 70) Console.log("We are going very well!!");
+    });
+```
+
+The maximum number of allowed days to be fetched can be configured in the Celpax Dashboard console. You need administrator privileges for accessing to the configuration section. 
+
 
 ## Pulses in a Typical Day
 
@@ -63,6 +77,21 @@ dailyPulseClient.getPulsesPerTypicalDay(site.id,function(err,typicalday){
 });
 ```
 A date member will also be returned indicating when the pulses per typical day was last updated.
+
+## Historical Pulses in a Typical Day
+
+You can retrieve the historical Pulses in a Typical day for a given site and the number of days to fetch since today as follows:
+
+```javascript
+dailyPulseClient.getHistoricalPulsesPerTypicalDay(mySite.id,numberOfDaysToFetch,function(err,typicaldayArray){
+    // Some dates may not have a PulsesPerTypicalDay calculated,
+    console.log("Normally there are:"+typicaldayArray[0].pulses + "pulses in a typical day");
+});
+```
+
+The maximum number of allowed days to be fetched can be configured in the Celpax Dashboard console. You need administrator privileges for accessing to the configuration section. 
+
+
 
 ## Testing
 
